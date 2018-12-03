@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>main</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/yun1.ico">
+	<link rel="stylesheet" href="common/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
+	<link rel="stylesheet" href="common/vegas.css">
+	<style>
+		html, body{height: 100%;}
+		body{color: #fff; font-family:'Bai Jamjuree', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; overflow: hidden; /*background: url(images/bg1.jpg);*/}
+
+		/* 로고 + 메뉴 */
+		div{width: 100%; height: 100%;}
+		h1{width: 100px; height: 100px; margin-top: 40px; margin-left: 100px; position: fixed; right: 40px;  cursor: pointer; z-index: 999;}
+		header{width: 200px; overflow: hidden; margin-right: 40px; position: fixed; right: 0; z-index: 888;}
+		header .menu1{margin: 330px 0 0 0; float: right; width: 200px;}
+		header .menu1 li{float: right; font-size: 20px; margin-top: 10px; text-transform: uppercase; transition: .5s; padding-bottom: 10px;}
+		header .menu1 li a{color: #333; display: block;}
+		.menu1 li:nth-child(1){margin-right: -32px;}
+		.menu1 li:nth-child(2){margin-right: -62px; clear: both;}
+		.menu1 li:nth-child(3){margin-right: -48px; clear: both;}
+		.menu1 b{font-weight: bold; font-size: 22px;}
+
+		/* about 창*/
+		section{ position: absolute; bottom: 110px; left: 260px; display: none; width: 1240px; z-index: 999;}
+		section h2{font-size: 70px; text-transform: capitalize; position: absolute; z-index: 100;}
+		section img{margin-top: 40px; float: left; position: relative;}
+		section p{font-size: 50px; line-height: 1.4; width: 500px; float: left; height: 400px; margin-top: 50px; text-transform: uppercase;}
+		section aside{width: 600px; height: 740px; position: absolute; left: 650px;}
+		aside:hover{cursor: pointer;}
+		section aside ul{font-size: 20px; width: 150px; float: left; height: 290px; margin-top: 80px;}
+		section aside ul li{margin: 5px 0;}
+		section aside ul li:nth-child(1){font-weight: bold; font-size: 22px;}
+		section aside ul li:nth-child(2){font-weight: bold; font-size: 22px;}
+		section aside .tools li{width:10px; background: #fff; height: 14px;  margin-bottom: 11px; opacity: ;
+		transition: .8s;}
+		section aside .services li{width:10px; background: #fff; height: 14px; margin-bottom: 11px; opacity: ;
+		transition: .8s;}
+		.tools, .services{margin-top: 140px;}
+
+		/* 하단 */
+		footer{position: fixed; bottom: 15px; right: 20px; font-size: 13px; z-index: 999;}
+
+	</style>
+	<script src="common/prefixfree.min.js"></script>
+	<script src="common/jquery-3.3.1.min.js"></script>
+	<script src="common/jquery-ui.min.js"></script>
+	<script src="common/vegas.min.js"></script>
+</head>
+<body>
+	<!-- <div data-vide-bg='images/ocean' data-vide-options='ocean:images/jpg, loop:true, muted:true, position:50% 50%'></div> -->
+	<!-- <div><img src="images/img1.jpg" alt="배경이미지"></div> -->
+		
+	<!-- 로고 -->
+	<h1><a href="index.html"><img src="images/logo5.png" alt="로고"></a></h1>
+
+	<!-- 메뉴 -->
+	<header>
+		<ul class="menu1">
+			<li><a href="#">about <b>me</b></a></li>		
+			<li><a href="work.html">creative <b>work</b></a></li>		
+			<li><a href="contact.html">contact <b>now</b></a></li>		
+		</ul>		
+	</header>
+
+	<!-- about 창 -->
+	<section>
+		<h2>about</h2>
+		<img src="images/img5.jpg">
+	
+	<aside>
+		<p>designer<br>
+			creative<br>
+			 experience<br>
+			 important<br>
+			 planning
+		</p>
+
+		<ul>
+			<li>Tools</li>
+			<li>-</li>
+			<li>photoshop</li>
+			<li>illustrator</li>
+			<li>html5 & css3</li>
+			<li>javascript</li>
+			<li>jQuery</li>
+		</ul>
+		<ul class="tools">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ul>
+			<li>Services</li>
+			<li>-</li>
+			<li>web design</li>
+			<li>app design</li>
+			<li>ci/bi design</li>
+			<li>ui/ux design</li>
+			<li>web publishing</li>
+		</ul>
+		<ul class="services">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</aside>
+	</section>
+
+	<!-- 하단 -->
+	<footer>Copyright &copy; 2018. All Rights Reserved by chaeyun</footer>
+
+	<!-- 배경 동영상 -->
+	<div></div>
+
+<script>
+	$('div').vegas({
+    slides: [
+        {   src: 'images/img1.jpg',
+            video: {
+                src: [
+                    'images/sky.mp4'
+                ],
+                loop: true,
+                mute: true  
+            	}
+        	}
+    	],
+    	overlay:'overlays/02.png'
+	});
+
+    //about me 페이지
+	$('.menu1 li').eq(0).on('click',function(){
+		$('section').slideToggle(1000);
+	});
+	//tools 그래프 애니메이션
+	$('.tools').mouseenter(function(){
+		$('.tools li').eq(0).css({'width':'100','opacity':'1','background-color':'#f1cb3c'}).animate();
+		$('.tools li').eq(1).css({'width':'100','opacity':'1'}).animate();
+		$('.tools li').eq(2).css({'width':'110','opacity':'1','background-color':'#f1cb3c'}).animate();
+		$('.tools li').eq(3).css({'width':'80','opacity':'1'}).animate();
+		$('.tools li').eq(4).css({'width':'90','opacity':'1','background-color':'#f1cb3c'}).animate();
+	});
+	//services 그래프 애니메이션
+	$('.services').mouseenter(function(){
+		$('.services li').eq(0).css({'width':'110','opacity':'1','background-color':'#f1cb3c'}).animate();
+		$('.services li').eq(1).css({'width':'80','opacity':'1'}).animate();
+		$('.services li').eq(2).css({'width':'90','opacity':'1','background-color':'#f1cb3c'}).animate();
+		$('.services li').eq(3).css({'width':'90','opacity':'1'}).animate();
+		$('.services li').eq(4).css({'width':'110','opacity':'1','background-color':'#f1cb3c'}).animate();
+	});
+
+	//menu 마우스 올렸을 때
+	$('.menu1 li').eq(0).mouseenter(function(){
+		$(this).css('margin-right','0');
+	});
+	$('.menu1 li').eq(1).mouseenter(function(){
+		$(this).css('margin-right','0');
+	});
+	$('.menu1 li').eq(2).mouseenter(function(){
+		$(this).css('margin-right','0');
+	});
+
+	//menu 마우스 뗐을 때
+	$('.menu1 li').eq(0).mouseleave(function(){
+		$(this).css('margin-right','-32px');
+	});
+	$('.menu1 li').eq(1).mouseleave(function(){
+		$(this).css('margin-right','-62px');
+	});
+	$('.menu1 li').eq(2).mouseleave(function(){
+		$(this).css('margin-right','-48px');
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>work</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/yun1.ico">
+	<link rel="stylesheet" href="common/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
+	<style>
+		html, body{height: 100%;}
+		body{color: #333; font-family: 'Bai Jamjuree', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; background: url(images/pattern6.png);}
+
+		/* 로고 + 메뉴 */
+		h1{width: 100px; height: 100px; margin-top: 40px; margin-right: 100px; position: fixed; left: 30px; cursor: pointer; z-index: 888;}
+		header{width: 240px; overflow: hidden; margin-left: 40px; position: fixed; left: 0;}
+		header .menu1{margin-top: 330px; width: 240px; height: 120px;}
+		header .menu1 li{font-size: 20px; margin-top: 10px; text-transform: uppercase; transition: .5s; float: left; padding-bottom: 10px;}
+		header .menu1 li a{color: #333; display: block;}
+		.menu1 li:nth-child(1){margin-left: -95px;}
+		.menu1 li:nth-child(2){margin-left: -106px; clear: both;}
+		.menu1 li:nth-child(3){margin-left: -54px; clear: both;}
+		.menu1 b{font-weight: bold; font-size: 22px;}
+		
+		/*포트폴리오 영역*/
+		.wrap{width: 5200px; margin-left: 300px;}
+		.wrap li{float: left;}
+		.wrap img:hover{opacity: .5; cursor: pointer;}
+
+		.web1 img{/*width: 450px; height: 600px; */ margin-top: 150px; margin-right: 250px; box-shadow: 5px 5px 20px #999;}
+		.web2 img{width: 450px; height: 621px; margin-top: 150px; margin-right: 250px; box-shadow: 5px 5px 20px #999;}
+		.web3 img{width: 450px; height: 621px; margin-top: 150px; margin-right: 250px; box-shadow: 5px 5px 20px #999;}
+		.web4 img{width: 450px; height: 621px; margin-top: 150px; margin-right: 250px; box-shadow: 5px 5px 20px #999;}
+		.web5 img{width: 450px; height: 621px; margin-top: 150px; margin-right: 250px; box-shadow: 5px 5px 20px #999;}
+		.web6 img{width: 450px; height: 621px; margin-top: 150px; box-shadow: 5px 5px 20px #999;}
+		.web7{font-size: 17px; position: relative; top: 500px; left:20px; width: 200px; text-align: center; font-weight: bold;}
+
+		/*하단*/
+		footer{position: fixed; bottom: 15px; right: 20px; font-size: 13px;}
+		
+	</style>
+	<script src="common/prefixfree.min.js"></script>
+	<script src="common/jquery-3.3.1.min.js"></script>
+	<script src="common/jquery-ui.min.js"></script>
+	<script src="common/jquery.mousewheel.min.js"></script>
+
+</head>
+<body>
+	<!-- 로고 -->
+	<h1><a href="index.html"><img src="images/logo5.png" alt="로고"></a></h1>
+
+	<!-- 메뉴 -->
+	<header>
+		<ul class="menu1">
+			<li><a href="index.html"><b>back to</b> main</a></li>
+			<li><a href="work.html"><b>creative</b> work</a></li>
+			<li><a href="contact.html"><b>now</b> contact</a></li>
+		</ul>
+	</header>
+
+	<!-- 포트폴리오 -->
+	<div class="wrap">
+		<ul>
+			<li class="web1"><a href="plusminuszeropt.html" target="_blank"><img src="images/web1.jpg"></a></li>
+			<li class="web2"><a href="midnightpt.html" target="_blank"><img src="images/web2.jpg"></a></li>
+			<li class="web3"><a href="#"><img src="images/img5.jpg"></a></li>
+			<li class="web4"><a href="#"><img src="images/img5.jpg"></a></li>
+			<li class="web5"><a href="#"><img src="images/img5.jpg"></a></li>
+			<li class="web6"><a href="#"><img src="images/img5.jpg"></a></li>
+			<li class="web7">Thank You</li>
+		</ul>
+	</div>
+
+	<!-- 하단 -->
+	<footer>Copyright &copy; 2018. All Rights Reserved by chaeyun</footer>
+
+<script>
+	//가로 스크롤
+  	$('html, body, *').mousewheel(function(e, delta) { 
+  	this.scrollLeft -= (delta * 60); 
+  	e.preventDefault(); 
+  		}); 
+
+  	//menu 마우스 올렸을 때
+	$('.menu1 li').eq(0).mouseenter(function(){
+		$(this).css('margin-left','0');
+	});
+	$('.menu1 li').eq(1).mouseenter(function(){
+		$(this).css('margin-left','0');
+	});
+	$('.menu1 li').eq(2).mouseenter(function(){
+		$(this).css('margin-left','0');
+	});
+
+	//menu 마우스 뗐을 때
+	$('.menu1 li').eq(0).mouseleave(function(){
+		$(this).css('margin-left',' -95px');
+	});
+	$('.menu1 li').eq(1).mouseleave(function(){
+		$(this).css('margin-left','-106px');
+	});
+	$('.menu1 li').eq(2).mouseleave(function(){
+		$(this).css('margin-left','-54px');
+	});
+</script>
+</body>
+</html>

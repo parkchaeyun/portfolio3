@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>contact</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/yun1.ico">
+	<link rel="stylesheet" href="common/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
+	<style>
+		html, body{height: 100%;}
+		body{color: #333; font-family: 'Bai Jamjuree', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; background: url(images/pattern6.png);}
+
+		/*로고 + 메뉴*/
+		h1{width: 100px; height: 100px; margin-top: 40px; margin-right: 100px; position: fixed; left: 30px; cursor: pointer; z-index: 999;}
+		header{width: 240px; overflow: hidden; margin-left: 40px; position: fixed; left: 0;}
+		header .menu1{margin-top: 330px; width: 240px; height: 120px;}
+		header .menu1 li{font-size: 20px; margin-top: 10px; text-transform: uppercase; transition: .5s; float: left; padding-bottom: 10px;}
+		header .menu1 li a{color: #333; display: block;}
+		.menu1 li:nth-child(1){margin-left: -95px;}
+		.menu1 li:nth-child(2){margin-left: -106px; clear: both;}
+		.menu1 li:nth-child(3){margin-left: -54px; clear: both;}
+		.menu1 b{font-weight: bold; font-size: 22px;}
+		
+		/*contact 창*/
+		h2{font-size: 70px; position: absolute; top: 205px; right: 510px; color: #333;}
+		.contact{background: #faf9f9; width: 1000px; height: 450px;  box-shadow: 5px 5px 20px #ccc; position: absolute; top: 250px; left: 400px; z-index: -99; font-weight: bold;}
+		.contact h3{font-size: 25px; position: absolute; top: 140px; left: 560px; font-weight: bold;}
+		.contact ul{float: left; position: absolute; top: 240px; left: 560px; font-size: 15px;}
+		.contact ul li{margin-top: 10px;}
+		.contact p{font-size: 14px; position: absolute; top: 175px; left: 670px; font-weight: bold; text-transform: capitalize;}
+		span img{width: 360px; float: left; margin: 160px 0 0 470px; opacity:; }
+		
+		/*하단*/
+		footer{position: fixed; bottom: 20px; left: 780px; font-size: 13px;}
+	</style>
+	<script src="common/prefixfree.min.js"></script>
+	<script src="common/jquery-3.3.1.min.js"></script>
+	<script src="common/jquery-ui.min.js"></script>
+</head>
+<body>
+	<!-- 로고 -->
+	<h1><a href="index.html"><img src="images/logo5.png" alt="로고"></a></h1>
+	<!-- 메뉴 -->
+	<header>
+		<ul class="menu1">
+			<li><a href="index.html"><b>back to</b> main</a></li>
+			<li><a href="work.html"><b>creative</b> work</a></li>
+			<li><a href="contact.html"><b>now</b> contact</a></li>
+		</ul>
+	</header>
+
+	<!-- contact 창 -->
+	<h2>contact</h2>
+	<span><img src="images/img5.jpg"></span>
+	<div class="contact">
+		<p>web designer / web publisher</p>
+		<h3>박 채 윤 / PARK CHAE YUN</h3>
+		<ul>
+			<li>TEL. 010-4844-1043</li>
+			<li>EMAIL. chaeyun4@naver.com</li>
+		</ul>	
+	</div>
+
+	<!-- 하단 -->
+	<footer>Copyright &copy; 2018. All Rights Reserved by chaeyun</footer>
+ 
+<script>
+  	//menu 마우스 올렸을 때
+	$('.menu1 li').eq(0).mouseenter(function(){
+		$(this).css('margin-left','0');
+	});
+	$('.menu1 li').eq(1).mouseenter(function(){
+		$(this).css('margin-left','0');
+	});
+	$('.menu1 li').eq(2).mouseenter(function(){
+		$(this).css('margin-left','0');
+	});
+
+	//menu 마우스 뗐을 때
+	$('.menu1 li').eq(0).mouseleave(function(){
+		$(this).css('margin-left',' -95px');
+	});
+	$('.menu1 li').eq(1).mouseleave(function(){
+		$(this).css('margin-left','-106px');
+	});
+	$('.menu1 li').eq(2).mouseleave(function(){
+		$(this).css('margin-left','-54px');
+	});
+	
+	//form 이벤트
+	//name
+	$('input').eq(0).mouseenter(function(){
+		$('label').eq(0).css('font-weight','bold');
+		$(this).css('background-color','#ffd98e');
+	});
+	$('input').eq(0).mouseleave(function(){
+		$('label').eq(0).css('font-weight','normal');
+		$(this).css('background-color','#fff');
+	});
+	//email
+	$('input').eq(1).mouseenter(function(){
+		$('label').eq(1).css('font-weight','bold');
+		$(this).css('background-color','#ffd98e');
+	});
+	$('input').eq(1).mouseleave(function(){
+		$('label').eq(1).css('font-weight','normal');
+		$(this).css('background-color','#fff');
+	});
+	//tel
+	$('input').eq(2).mouseenter(function(){
+		$('label').eq(2).css('font-weight','bold');
+		$(this).css('background-color','#ffd98e');
+	});
+	$('input').eq(2).mouseleave(function(){
+		$('label').eq(2).css('font-weight','normal');
+		$(this).css('background-color','#fff');
+	});
+	//message box
+	$('textarea').mouseenter(function(){
+		$(this).css('background-color','#ffd98e');
+	});
+	$('textarea').mouseleave(function(){
+		$(this).css('background-color','#fff');
+	});
+</script>
+</body>
+</html>
